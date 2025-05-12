@@ -1,5 +1,9 @@
 
-export default async function ({ params }: {params: Promise<{productId: string, reviewId: string}>}){
+type PageParams = {
+    params: Promise<{productId: string, reviewId: string}>;
+}
+
+export default async function ({ params }: PageParams){
     const { productId, reviewId } = await params;
     return(
         <>
